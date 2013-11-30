@@ -9,6 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class AdminController {
 	
+	
+	
 	@RequestMapping(value="/home")
 	public ModelAndView helloWorld() {
 		  String message = "Hello World, Spring 3.0!";
