@@ -5,25 +5,50 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>weixinback</name>
 	<packaging>war</packaging>
-	
+    <properties>
+    	<org.slf4j-version>1.6.1</org.slf4j-version>
+    </properties>
 	<dependencies>
+	
+		 <!-- Logging -->
+     <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-api</artifactId>
+             <version>${org.slf4j-version}</version>
+     </dependency>
+     <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>jcl-over-slf4j</artifactId>
+             <version>${org.slf4j-version}</version>
+             <scope>runtime</scope>
+     </dependency>
+     <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-log4j12</artifactId>
+             <version>${org.slf4j-version}</version>
+             <scope>runtime</scope>
+     </dependency>
+     <dependency>
+             <groupId>log4j</groupId>
+             <artifactId>log4j</artifactId>
+             <version>1.2.16</version>
+             <scope>runtime</scope>
+     </dependency>
+                
+   
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j-adapter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
 		<dependency>
             <groupId>com.baidu.bce.javaruntime</groupId>
             <artifactId>bce-api-util-local</artifactId>
             <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j-adapter</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+    
         <dependency>
             <groupId>com.baidu.bce.javaruntime</groupId>
             <artifactId>bae-sdk-local</artifactId>
@@ -178,6 +203,7 @@
 			<plugin>
 				<groupId>com.baidu.bae.maven.jetty</groupId>
   				<artifactId>bae-maven-jetty-plugin</artifactId>
+  				
   				<version>8.0.0.M3</version>
   				<configuration>
                 	<jettyport>8080</jettyport>

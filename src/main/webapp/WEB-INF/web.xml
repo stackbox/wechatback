@@ -21,7 +21,7 @@
     
     <!-- Springmvc配置 -->
     <servlet>
-		<servlet-name>spring</servlet-name>
+		<servlet-name>springmvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>  
 	        <param-name>contextConfigLocation</param-name>  
@@ -30,8 +30,8 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>spring</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
 	<!-- CharacterFilter配置 -->
