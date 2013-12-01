@@ -19,11 +19,9 @@ public class AdminController {
 	@Autowired@Qualifier("adminService")
 	private AdminService adminService;
 	
-	@RequestMapping(value="/home")
-	public ModelAndView helloWorld() {
-		  String message = "Hello World, Spring 3.0!";
-		  System.out.println(message);
-		  return new ModelAndView("hello", "message", message);
+	@RequestMapping(value={"/home","/index.*"})
+	public String home() {
+		 return "/index";
 	}
 	
 	@RequestMapping(value={"/member/login"}, method=RequestMethod.POST)
@@ -37,7 +35,7 @@ public class AdminController {
 			session.setAttribute("admin", resultAdmin);
 			return "redirect:/dashboard";
 		}
-		return "redirect:/member/home";
+		return "redirect:/home";
 	}
 
 }
