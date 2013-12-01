@@ -14,8 +14,12 @@ public class AdminService {
 	
 	@Transactional
 	public Admin queryByNameAndPassword(String adminName, String password) {
-		Admin admin = new Admin();
-		admin.setAdminName("叠搭宝箱");
-		return admin;
+		
+		if(adminName.trim().equals("叠搭宝箱") && password.trim().equals("123456")) {
+			Admin admin = new Admin();
+			admin.setAdminName("叠搭宝箱");
+			return admin;
+		}
+		return null;
 	}
 }

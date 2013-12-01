@@ -12,7 +12,7 @@ String basePath = request.getScheme() + "://"
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
   <ul>
     <li class="active">
-	<a href="index.html">
+	<a href="javascript:void(0)">
 	    <i class="icon icon-home"></i> 
             <span>仪表盘</span>
 	    <span class="label label-important">9</span>
@@ -20,14 +20,14 @@ String basePath = request.getScheme() + "://"
     </li>
 
     <li> 
- 	<a href="charts.html">
+ 	<a href="javascript:void(0)">
 		<i class="icon icon-signal"></i> 
 		<span>最近消息</span>
 	</a>
     </li>
 	
      <li> 
- 	<a href="charts.html">
+ 	<a href="javascript:void(0)">
 		<i class="icon icon-signal"></i> 
 		<span>用户管理</span>
 	</a>
