@@ -59,7 +59,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
-	
+	<!--  
 	 <jsp-config>
                 <taglib>
                         <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri>
@@ -78,4 +78,5 @@
                         <trim-directive-whitespaces>true</trim-directive-whitespaces>
                 </jsp-property-group>
         </jsp-config>
+        -->
 </web-app>
