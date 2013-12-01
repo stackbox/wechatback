@@ -1,156 +1,200 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.littlekite.</groupId>
 	<artifactId>weixinback</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>weixinback</name>
 	<packaging>war</packaging>
-	
+	<properties>
+		<org.slf4j-version>1.6.1</org.slf4j-version>
+	</properties>
 	<dependencies>
-		<dependency>
-            <groupId>com.baidu.bce.javaruntime</groupId>
-            <artifactId>bce-api-util-local</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j-adapter</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baidu.bce.javaruntime</groupId>
-            <artifactId>bae-sdk-local</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
-        </dependency> 
-        <dependency>
-            <groupId>com.baidu.bce.javaruntime</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.18</version>
-            <classifier>bin</classifier>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.baidu.bce.javaruntime</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.1.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.baidu.bce.javaruntime</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.1</version>
-            <scope>provided</scope>
-        </dependency>		
-		<dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <scope>provided</scope>
-        </dependency>
-        
-        <!-- spring-aop 依赖包 aopalliance -->
-		<dependency>
-		    <groupId>aopalliance</groupId>
-		    <artifactId>aopalliance</artifactId>
-		    <version>1.0</version>
-		</dependency>
-		
-		<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-aop</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-beans</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-context</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-core</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-expression</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-jdbc</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-orm</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-tx</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-web</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-webmvc</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-webmvc</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-test</artifactId>
-		<version>3.0.5.RELEASE</version>
-	</dependency>
-	
-	
-	<!-- data validation with hibernate-validator -->
-	<dependency>
-       <groupId>javax.validation</groupId>
-       <artifactId>validation-api</artifactId>
-       <version>1.0.0.GA</version>
-    </dependency>
-    <dependency>
-       <groupId>org.hibernate</groupId>
-       <artifactId>hibernate-validator</artifactId>
-       <version>4.1.0.Final</version>
-    </dependency>
-    
 
-    </dependencies>
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j-version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j-adapter</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.baidu.bce.javaruntime</groupId>
+			<artifactId>bce-api-util-local</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.baidu.bce.javaruntime</groupId>
+			<artifactId>bae-sdk-local</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.baidu.bce.javaruntime</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.18</version>
+			<classifier>bin</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.baidu.bce.javaruntime</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.baidu.bce.javaruntime</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- spring-aop 依赖包 aopalliance -->
+		<dependency>
+			<groupId>aopalliance</groupId>
+			<artifactId>aopalliance</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+
+		<!-- JSTL1.2 and taglibs1.1.2 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>c</artifactId>
+			<version>1.1.2</version>
+			<type>tld</type>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>fmt</artifactId>
+			<version>1.1.2</version>
+			<type>tld</type>
+		</dependency>
+
+		<!-- data validation with hibernate-validator -->
+
+
+	</dependencies>
 	<repositories>
 		<repository>
 			<id>baemaven</id>
@@ -172,46 +216,47 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<build>
-        <plugins>
-        	<plugin>
-            	<groupId>org.apache.maven.plugins</groupId>
-            	<artifactId>maven-compiler-plugin</artifactId>
-            	<configuration>
-            		<source>1.6</source>
-                	<target>1.6</target>
-            	</configuration>
-        	</plugin>
-        	<plugin>
-    			<groupId>org.apache.maven.plugins</groupId>
-    			<artifactId>maven-war-plugin</artifactId>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
 			</plugin>
 			<plugin>
 				<groupId>com.baidu.bae.maven.jetty</groupId>
-  				<artifactId>bae-maven-jetty-plugin</artifactId>
-  				<version>8.0.0.M3</version>
-  				<configuration>
-                	<jettyport>8080</jettyport>
-            	</configuration>
+				<artifactId>bae-maven-jetty-plugin</artifactId>
+
+				<version>8.0.0.M3</version>
+				<configuration>
+					<jettyport>8080</jettyport>
+				</configuration>
 			</plugin>
-            <plugin>
-                <groupId>com.baidu.bae.maven</groupId>
-                <artifactId>bae-maven-plugin</artifactId>
-                <version>1.0.0.0</version>
-                <executions>
-                	<execution>
-                		<id>baedeploy</id>
-                		<phase>install</phase>
-                		<goals>
-                			<goal>baedeploy</goal>
-                		</goals>
-                		<configuration>
-                			<changepass>false</changepass>
-                			<appid>1806370</appid>
-                			<version>0</version>     			
-                		</configuration>
-                	</execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+			<plugin>
+				<groupId>com.baidu.bae.maven</groupId>
+				<artifactId>bae-maven-plugin</artifactId>
+				<version>1.0.0.0</version>
+				<executions>
+					<execution>
+						<id>baedeploy</id>
+						<phase>install</phase>
+						<goals>
+							<goal>baedeploy</goal>
+						</goals>
+						<configuration>
+							<changepass>false</changepass>
+							<appid>appidsdj7766l9b</appid>
+							<version>0</version>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

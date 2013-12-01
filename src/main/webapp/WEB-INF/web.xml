@@ -6,17 +6,62 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
 
+    <listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+   	    <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/applicationContext.xml</param-value>
+    </context-param>
+	
+	<session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <filter>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<filter-class>org.stackbox.weixinback.filter.DisableUrlSessionFilter</filter-class>
+	</filter>
+    
+	<filter-mapping>
+		<filter-name>DisableUrlSessionFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+    <!-- Springmvc dispatherservlet -->
+    <servlet>
+		<servlet-name>springmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>  
+	        <param-name>contextConfigLocation</param-name>  
+	        <param-value>classpath:/springmvc/spring-servlet.xml</param-value>  
+   		</init-param> 
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<!-- CharacterFilter配置 -->
+	<filter>
+		<filter-name>Encoding</filter-name>
+		<filter-class>
+			org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
- <servlet>
-    <servlet-name>hello</servlet-name>
-    <servlet-class>com.baidu.maven.demo.HelloServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>hello</servlet-name>
-    <url-pattern>/hello</url-pattern>
-</servlet-mapping>
 
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
+	<welcome-file-list>
+	    <welcome-file>index.html</welcome-file>
+	    <welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
