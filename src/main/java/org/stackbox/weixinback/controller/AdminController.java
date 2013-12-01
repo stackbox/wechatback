@@ -37,5 +37,11 @@ public class AdminController {
 		}
 		return "redirect:/home";
 	}
+	
+	@RequestMapping(value={"/member/logout"})
+	public String logout(Model model, HttpSession session) {
+		session.removeAttribute("admin");
+		return "redirect:/home";
+	}
 
 }

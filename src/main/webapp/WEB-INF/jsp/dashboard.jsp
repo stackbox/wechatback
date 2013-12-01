@@ -17,63 +17,17 @@ String basePath = request.getScheme() + "://"
 <link rel="stylesheet" href="assets/css/fullcalendar.css" />
 <link rel="stylesheet" href="assets/css/matrix-style.css" />
 <link rel="stylesheet" href="assets/css/matrix-media.css" />
-<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/jquery.gritter.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<!--Header-part-->
-<div id="header">
-  <h1><a href="dashboard.html">Matrix Admin</a></h1>
-</div>
-<!--close-Header-part--> 
 
 
-<!--top-Header-menu-->
-<div id="user-nav" class="navbar navbar-inverse">
-  <ul class="nav">
-    
-    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">叠搭宝箱</span></a></li>
-    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
-  </ul>
-</div>
-<!--close-top-Header-menu-->
+<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="leftbar.jsp"></jsp:include>
 
-<!--close-top-serch-->
-<!--sidebar-menu-->
-<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
-  <ul>
-    <li class="active">
-	<a href="index.html">
-	    <i class="icon icon-home"></i> 
-            <span>仪表盘</span>
-	    <span class="label label-important">9</span>
-	</a>
-    </li>
-
-    <li> 
- 	<a href="charts.html">
-		<i class="icon icon-signal"></i> 
-		<span>最近消息</span>
-	</a>
-    </li>
-	
-     <li> 
- 	<a href="charts.html">
-		<i class="icon icon-signal"></i> 
-		<span>用户管理</span>
-	</a>
-    </li>
-
-
-   
-   
-
-  </ul>
-</div>
-<!--sidebar-menu-->
 
 <!--main-container-part-->
 <div id="content">
@@ -83,40 +37,25 @@ String basePath = request.getScheme() + "://"
     <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
   </div>
 <!--End-breadcrumbs-->
-
- 
-
-<!--Chart-box-->    
     
-      <div class="widget-box">
-        <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
-          <h5>Site Analytics</h5>
-        </div>
-        <div class="widget-content" >
-          <div class="row-fluid">
-            <div class="span9">
-              <div class="chart"></div>
-            </div>
-          </div>
-        </div>
-      </div>
- 
-<!--End-Chart-box--> 
-    <hr/>
-
-    
-  </div>
+     <div class="widget-box">
+       <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
+         <h5>Site Analytics</h5>
+       </div>
+       <div class="widget-content" >
+         <div class="row-fluid">
+           <div class="span9">
+             <div class="chart"></div>
+           </div>
+         </div>
+       </div>
+     </div>
+   <hr/>
 </div>
 
 <!--end-main-container-part-->
 
-<!--Footer-part-->
-
-<div class="row-fluid">
-  <div id="footer" class="span12"> 2013 &copy; Wechat backstag <a href="http://stackbox.org/">stackbox.org</a> </div>
-</div>
-
-<!--end-Footer-part-->
+<jsp:include page="footer.jsp"></jsp:include>
 
 <script src="assets/js/excanvas.min.js"></script> 
 <script src="assets/js/jquery.min.js"></script> 
