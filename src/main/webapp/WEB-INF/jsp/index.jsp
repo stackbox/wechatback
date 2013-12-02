@@ -24,14 +24,14 @@ String basePath = request.getScheme() + "://"
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_lg"><i class="icon-user icon-white"></i></span><input name="adminName" type="text" placeholder="Username" />
+                           <input name="adminName" type="text" placeholder="Username" />
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_ly"><i class="icon-lock icon-white"></i></span><input name="password" type="password" placeholder="Password" />
+                           <input name="password" type="password" placeholder="Password" />
                         </div>
                     </div>
                 </div>
