@@ -17,9 +17,9 @@ String basePath = request.getScheme() + "://"
 <link rel="stylesheet" href="assets/css/fullcalendar.css" />
 <link rel="stylesheet" href="assets/css/matrix-style.css" />
 <link rel="stylesheet" href="assets/css/matrix-media.css" />
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/css/jquery.gritter.css" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 

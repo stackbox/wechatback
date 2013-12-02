@@ -19,7 +19,7 @@ public class AdminController {
 	@Autowired@Qualifier("adminService")
 	private AdminService adminService;
 	
-	@RequestMapping(value={"/home","/index.*"})
+	@RequestMapping(value={"/home","/index.*","/"})
 	public String home() {
 		 return "/index";
 	}

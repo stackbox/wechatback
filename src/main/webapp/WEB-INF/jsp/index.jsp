@@ -10,13 +10,12 @@ String basePath = request.getScheme() + "://"
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>管理员登录</title>
+	<title>管理员登录HH</title>
 
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css" />
 	<link rel="stylesheet" href="assets/css/matrix-login.css" />
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	
 </head>
 <body>
         <div id="loginbox">            
@@ -25,14 +24,14 @@ String basePath = request.getScheme() + "://"
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_lg"><i class="icon-user"></i></span><input name="adminName" type="text" placeholder="Username" />
+                           <input name="adminName" type="text" placeholder="Username" />
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input name="password" type="password" placeholder="Password" />
+                           <input name="password" type="password" placeholder="Password" />
                         </div>
                     </div>
                 </div>
