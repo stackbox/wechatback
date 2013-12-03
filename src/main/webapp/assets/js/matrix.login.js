@@ -4,10 +4,6 @@ $(document).ready(function(){
 	var login = $('#loginform');
 	var recover = $('#recoverform');
 	var speed = 400;
-	
-	$("#loginform .form-actions .pull-right a").bind('click',function(){
-		$("#loginform").submit();
-	})
 
 	$('#to-recover').click(function(){
 		
