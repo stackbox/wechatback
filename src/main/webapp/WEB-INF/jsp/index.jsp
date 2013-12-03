@@ -58,6 +58,7 @@ String basePath = request.getScheme() + "://"
         
         <script src="assets/js/jquery.min.js"></script>  
         <script src="assets/js/matrix.login.js"></script> 
+        <script src="assets/test.js"></script>
     </body>
 
 </html>

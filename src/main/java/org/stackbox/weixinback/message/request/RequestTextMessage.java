@@ -78,7 +78,6 @@ public class RequestTextMessage {
 		this.content = content;
 	}
 
-	@XmlJavaTypeAdapter(AdapterXmlCDATA.class)
 	public Long getMsgId() {
 		return msgId;
 	}

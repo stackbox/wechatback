@@ -31,7 +31,7 @@ public class ExchageController {
 		}
 	}
 	
-	@RequestMapping(value={"/corecontroller"}, method=RequestMethod.POST, headers="Accept=application/xml")
+	@RequestMapping(value={"/corecontroller"}, method=RequestMethod.POST)
 	public @ResponseBody ResponseTextMessage fetchXML(@RequestBody RequestTextMessage reqMsg) {
 		ResponseTextMessage msg = new ResponseTextMessage();
 		msg.setContent("喵呜，系统娘正在全力研发中。。。");
